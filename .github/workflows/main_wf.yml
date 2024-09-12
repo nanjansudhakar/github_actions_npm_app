@@ -1,0 +1,21 @@
+# main_wf.yml
+name: Main NPM CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup and Test
+        uses: nanjansudhakar/github_actions_library/.github/actions/environment_setup@main
+        with:
+          node-version: '16'    
+  use_shared_workflow:
+    uses: nanjansudhakar/github_actions_library/.github/workflows/reusable-workflow.yml@main
