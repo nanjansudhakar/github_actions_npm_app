@@ -16,7 +16,7 @@ jobs:
       - name: Setup and Test
         uses: nanjansudhakar/github_actions_library/.github/actions/environment_setup@main
         with:
-          node-version: '16'    
+          node-version: '20'    
   # use_shared_workflow:
   #   uses: nanjansudhakar/github_actions_library/.github/workflows/reusable-workflow.yml@main
   #   with:
