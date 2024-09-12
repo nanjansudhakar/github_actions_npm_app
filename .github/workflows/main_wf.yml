@@ -13,7 +13,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup and Test
+      - name: action checkout , setup npm & install npm then test 
         uses: nanjansudhakar/github_actions_library/.github/actions/environment_setup@main
         with:
           node-version: '20'    
