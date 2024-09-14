@@ -13,10 +13,15 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      # Step 1: Checkout the code using shared action
+      - name: Checkout code
+        uses: nanjansudhakar/github_actions_library/.github/actions/checkout_action@main
+        
       - name: action checkout , setup npm & install npm then test 
         uses: nanjansudhakar/github_actions_library/.github/actions/environment_setup@main
         with:
           node-version: '20'    
+          
   use_shared_workflow:
     uses: nanjansudhakar/github_actions_library/.github/workflows/reusable-workflow.yml@main
     with:
